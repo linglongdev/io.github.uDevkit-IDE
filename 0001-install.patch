@@ -1,0 +1,52 @@
+From d088df9c166bd485760d5a81f1d4b1a34bf2f6d7 Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Tue, 13 Aug 2024 12:53:44 +0800
+Subject: [PATCH] install
+
+---
+ src/udk-ide.desktop | 7 +++++++
+ src/udk-ide.pro     | 7 ++-----
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+ create mode 100644 src/udk-ide.desktop
+
+diff --git a/src/udk-ide.desktop b/src/udk-ide.desktop
+new file mode 100644
+index 0000000..12872fb
+--- /dev/null
++++ b/src/udk-ide.desktop
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Type=Application
++Name=uDevkit-IDE
++Comment=UniSwarm IDE
++Exec=udk-ide
++Icon=udk-ide
++Categories=IDE;
+diff --git a/src/udk-ide.pro b/src/udk-ide.pro
+index 3cb7408..05b5df9 100644
+--- a/src/udk-ide.pro
++++ b/src/udk-ide.pro
+@@ -139,10 +139,7 @@ win32|win64
+     RC_FILE = udk-ide.rc
+ }
+ 
+-isEmpty(PREFIX)
+-{
+-    PREFIX=/usr/local
+-}
++
+ target.path=$$PREFIX/bin
+ unix
+ {
+@@ -151,7 +148,7 @@ unix
+     desktop.files = udk-ide.desktop
+     INSTALLS += desktop
+     icons.path  = $$PREFIX/share/icons
+-    icons.files = udk-ide.ico
++    icons.files = udk-ide.png
+     INSTALLS += icons
+     data.path  = $$PREFIX/data
+     data.files = ../data/*
+-- 
+2.43.4
+
